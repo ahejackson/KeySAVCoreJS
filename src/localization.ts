@@ -103,7 +103,7 @@ export class LocalizationLanguage {
   /**
    * The names of all ribbons in Gen 6 and 7 games by set and flag position.
    */
-  ribbonNames: string[][];
+  ribbons: string[][];
 
   /**
    * The characteristics a Pokémon can have, by type and alternative.
@@ -172,7 +172,7 @@ export class LocalizationLanguage {
     const res = [];
 
     for (let i = 0; i < 8; ++i) {
-      const names = this.ribbonNames[i];
+      const names = this.ribbons[i];
       let ribbonSet = pkm.ribbonData[i];
 
       for (let j = 0; ribbonSet > 0; ++j, ribbonSet >>= 1) {
